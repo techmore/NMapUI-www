@@ -176,10 +176,12 @@
                             <i data-lucide="download" class="w-4.5 h-4.5"></i>
                             Download Free
                         </a>
+                        <!--
                         <a href="#demo" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border-2 border-olive-400/50 text-olive-800 font-semibold text-sm hover:bg-olive-200/40 hover:border-olive-500/60 transition-all">
                             <i data-lucide="play-circle" class="w-4.5 h-4.5"></i>
                             Watch Demo
                         </a>
+                        -->
                     </div>
 
                     <!-- Trust indicators -->
@@ -199,10 +201,22 @@
                     </div>
                 </div>
 
+                <div class="relative">
+                    <div class="w-64">
+                        <img src="screenshots/01-dashboard.png" class="rounded mb-2">
+                        <img src="screenshots/02-scan-results.png" class="rounded mb-2">
+                        <img src="screenshots/03-reports.png" class="rounded mb-2">
+                        <img src="screenshots/04-settings.png" class="rounded mb-2">
+                        <img src="screenshots/05-scheduled.png" class="rounded mx-auto block">
+                    </div>    
+                </div> 
                 <!-- Right content - Dashboard preview -->
+                <!--
                 <div class="relative">
                     <div class="relative rounded-2xl border border-olive-300/50 bg-white/70 backdrop-blur-sm shadow-2xl shadow-olive-900/10 overflow-hidden">
+                    -->    
                         <!-- Mock title bar -->
+                         <!--
                         <div class="flex items-center gap-2 px-5 py-3 bg-olive-100/70 border-b border-olive-200/50">
                             <div class="flex gap-1.5">
                                 <div class="w-3 h-3 rounded-full bg-red-400/70"></div>
@@ -211,9 +225,13 @@
                             </div>
                             <span class="text-xs font-medium text-olive-500 ml-3">NMapUI — Dashboard</span>
                         </div>
+                        -->
                         <!-- Mock content -->
+                        <!--
                         <div class="p-5 space-y-4">
+                        -->
                             <!-- Scan status -->
+                            <!--
                             <div class="flex items-center justify-between bg-olive-50 rounded-xl p-4 border border-olive-200/40">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
@@ -226,7 +244,9 @@
                                 </div>
                                 <span class="px-2.5 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">Clean</span>
                             </div>
+                            -->
                             <!-- Stats grid -->
+                            <!--
                             <div class="grid grid-cols-3 gap-3">
                                 <div class="bg-olive-50 rounded-xl p-3 border border-olive-200/30 text-center">
                                     <p class="text-2xl font-bold text-olive-900">47</p>
@@ -241,7 +261,9 @@
                                     <p class="text-xs text-olive-500">Compliance Score</p>
                                 </div>
                             </div>
+                            -->
                             <!-- Progress bar -->
+                            <!--
                             <div class="space-y-1.5">
                                 <div class="flex justify-between text-xs text-olive-600">
                                     <span>Compliance Progress</span>
@@ -253,7 +275,9 @@
                             </div>
                         </div>
                     </div>
+                    -->
                     <!-- Floating element -->
+                    <!--
                     <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg border border-olive-200/50 px-4 py-3 flex items-center gap-3 z-10">
                         <div class="w-10 h-10 rounded-full bg-cream-300 flex items-center justify-center">
                             <i data-lucide="shield-check" class="w-5 h-5 text-olive-700"></i>
@@ -262,8 +286,9 @@
                             <p class="text-xs font-semibold text-olive-900">Report Generated</p>
                             <p class="text-xs text-olive-500">PDF Report Generated</p>
                         </div>
-                    </div>
-                </div>
+                    </div>    
+                </div>                
+                -->
             </div>
         </div>
     </section>
@@ -274,8 +299,8 @@
             <!-- Section Header -->
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="inline-block px-3 py-1 rounded-full bg-olive-100 text-olive-700 text-xs font-semibold tracking-wide uppercase mb-4">Features</span>
-                <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-olive-900 mb-4">Everything you need for compliance scanning</h2>
-                <p class="text-olive-600 text-lg">Purpose-built for system administrators managing insurance-mandated vulnerability assessments.</p>
+                <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-olive-900 mb-4">Vulnerability Scanning</h2>
+                <p class="text-olive-600 text-lg">Purpose-built for system administrators managing insurance conscience vulnerability assessments.</p>
             </div>
 
             <!-- Feature Cards -->
@@ -310,7 +335,7 @@
                         <i data-lucide="bell" class="w-6 h-6 text-olive-700"></i>
                     </div>
                     <h3 class="text-lg font-semibold text-olive-900 mb-2">Real-Time Alerts</h3>
-                    <p class="text-olive-600 text-sm leading-relaxed">Get notified immediately when new vulnerabilities are detected. Email and desktop alerts keep you ahead of threats.</p>
+                    <p class="text-olive-600 text-sm leading-relaxed">Get notified when new vulnerabilities are detected. WebUI and reporting keep you ahead of threats.</p>
                 </div>
                 <!-- Card 5 -->
                 <div class="card-hover bg-olive-50/60 rounded-2xl p-6 border border-olive-200/40">
@@ -358,9 +383,25 @@ cd NmapUI</code></pre>
                             </div>
                         </div>
 
+
                         <!-- Step 2 -->
                         <div class="flex gap-4">
                             <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olive-800 text-cream-100 flex items-center justify-center text-sm font-bold">2</div>
+                            <div class="space-y-2 flex-1">
+                                <p class="font-semibold text-olive-900">Install Brew</p>
+                                <div class="relative">
+                                    <pre class="bg-olive-900 text-cream-100 rounded-xl px-5 py-3.5 text-sm font-mono overflow-x-auto"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/
+Homebrew/install/HEAD/install.sh)"</code></pre>
+                                    <button onclick="copyCode(this, '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"')" class="absolute top-3 right-3 p-1.5 rounded-lg bg-olive-700 hover:bg-olive-600 transition-colors text-cream-200" title="Copy">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olive-800 text-cream-100 flex items-center justify-center text-sm font-bold">3</div>
                             <div class="space-y-2 flex-1">
                                 <p class="font-semibold text-olive-900">Run Install Script</p>
                                 <div class="relative">
@@ -372,14 +413,28 @@ cd NmapUI</code></pre>
                             </div>
                         </div>
 
-                        <!-- Step 3 -->
+                        <!-- Step 4 -->
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olive-800 text-cream-100 flex items-center justify-center text-sm font-bold">3</div>
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olive-800 text-cream-100 flex items-center justify-center text-sm font-bold">4</div>
                             <div class="space-y-2 flex-1">
                                 <p class="font-semibold text-olive-900">Launch NMapUI</p>
                                 <div class="relative">
                                     <pre class="bg-olive-900 text-cream-100 rounded-xl px-5 py-3.5 text-sm font-mono overflow-x-auto"><code>sudo node server.js</code></pre>
                                     <button onclick="copyCode(this, 'sudo node server.js')" class="absolute top-3 right-3 p-1.5 rounded-lg bg-olive-700 hover:bg-olive-600 transition-colors text-cream-200" title="Copy">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- Step 5 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olive-800 text-cream-100 flex items-center justify-center text-sm font-bold">4</div>
+                            <div class="space-y-2 flex-1">
+                                <p class="font-semibold text-olive-900">open localhost:9000</p>
+                                <div class="relative">
+                                    <pre class="bg-olive-900 text-cream-100 rounded-xl px-5 py-3.5 text-sm font-mono overflow-x-auto"><code>open localhost:9000</code></pre>
+                                    <button onclick="copyCode(this, 'localhost:9000')" class="absolute top-3 right-3 p-1.5 rounded-lg bg-olive-700 hover:bg-olive-600 transition-colors text-cream-200" title="Copy">
                                         <i data-lucide="copy" class="w-4 h-4"></i>
                                     </button>
                                 </div>
@@ -392,10 +447,12 @@ cd NmapUI</code></pre>
                             <i data-lucide="github" class="w-4.5 h-4.5"></i>
                             View on GitHub
                         </a>
+                        <!--
                         <a href="#" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border-2 border-olive-500/50 text-olive-800 font-semibold text-sm hover:bg-olive-200/40 transition-all">
                             <i data-lucide="book-open" class="w-4.5 h-4.5"></i>
                             Read Docs
                         </a>
+                        -->
                     </div>
                 </div>
 
@@ -436,6 +493,7 @@ cd NmapUI</code></pre>
     </section>
 
     <!-- ========== RESULTS / SHOWCASE SECTION ========== -->
+    <!--
     <section id="results" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -443,10 +501,13 @@ cd NmapUI</code></pre>
                 <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-olive-900 mb-4">See what compliance-ready reports look like</h2>
                 <p class="text-olive-600 text-lg">Clean, detailed, and auditor-friendly — these are the reports NMapUI generates.</p>
             </div>
-
+            -->
             <!-- Report preview cards -->
+            <!--
             <div class="grid lg:grid-cols-3 gap-8">
+                -->
                 <!-- Report 1 -->
+                <!--
                 <div class="rounded-2xl border border-olive-200/50 bg-olive-50/40 overflow-hidden card-hover">
                     <div class="bg-olive-100/60 px-5 py-3 border-b border-olive-200/40 flex items-center gap-2">
                         <i data-lucide="file-text" class="w-4 h-4 text-olive-600"></i>
@@ -463,7 +524,9 @@ cd NmapUI</code></pre>
                         </div>
                     </div>
                 </div>
+                -->
                 <!-- Report 2 -->
+                <!--
                 <div class="rounded-2xl border border-olive-200/50 bg-olive-50/40 overflow-hidden card-hover">
                     <div class="bg-olive-100/60 px-5 py-3 border-b border-olive-200/40 flex items-center gap-2">
                         <i data-lucide="list-checks" class="w-4 h-4 text-olive-600"></i>
@@ -485,14 +548,18 @@ cd NmapUI</code></pre>
                         <p class="text-xs text-olive-500 pt-2">3 vulnerabilities detected across 47 hosts</p>
                     </div>
                 </div>
+                -->
                 <!-- Report 3 -->
+                <!--
                 <div class="rounded-2xl border border-olive-200/50 bg-olive-50/40 overflow-hidden card-hover">
                     <div class="bg-olive-100/60 px-5 py-3 border-b border-olive-200/40 flex items-center gap-2">
                         <i data-lucide="trending-up" class="w-4 h-4 text-olive-600"></i>
                         <span class="text-sm font-semibold text-olive-800">Compliance Trend</span>
                     </div>
                     <div class="p-5">
+                    -->
                         <!-- Mini bar chart -->
+                        <!--
                         <div class="flex items-end gap-2 h-32 mt-2">
                             <div class="flex-1 bg-olive-300 rounded-t-md" style="height: 60%;"></div>
                             <div class="flex-1 bg-olive-400 rounded-t-md" style="height: 72%;"></div>
@@ -510,17 +577,21 @@ cd NmapUI</code></pre>
             </div>
         </div>
     </section>
-
+    -->
     <!-- ========== VIDEO DEMO SECTION ========== -->
+    <!--
     <section id="demo" class="py-20 lg:py-28 gradient-dark">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-block px-3 py-1 rounded-full bg-olive-700/60 text-cream-200 text-xs font-semibold tracking-wide uppercase mb-4">Video Demo</span>
             <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-cream-100 mb-4">See NMapUI in action</h2>
             <p class="text-cream-300/80 text-lg mb-10 max-w-xl mx-auto">Watch how easy it is to run a compliance scan, generate reports, and upload to Google Drive — all in under 3 minutes.</p>
-
+            -->
             <!-- Video placeholder -->
+            <!--
             <div class="relative rounded-2xl overflow-hidden border border-olive-600/30 shadow-2xl shadow-black/30 max-w-3xl mx-auto">
+                -->
                 <!-- Thumbnail with play button -->
+                <!--
                 <div class="relative aspect-video bg-olive-800 flex items-center justify-center cursor-pointer group">
                     <img src="http://static.photos/technology/1200x630/87" alt="NMapUI Demo" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity">
                     <div class="relative z-10 flex flex-col items-center gap-4">
@@ -548,7 +619,7 @@ cd NmapUI</code></pre>
             </div>
         </div>
     </section>
-
+    -->
     <!-- ========== PRICING SECTION ========== -->
     <section id="pricing" class="py-20 lg:py-28 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
