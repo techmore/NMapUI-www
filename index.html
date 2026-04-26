@@ -210,7 +210,7 @@
                                 <div class="w-3 h-3 rounded-full bg-green-400/70"></div>
                             </div>
                             <span class="text-xs font-medium text-olive-500 ml-3">NMapUI — Dashboard</span>
-</div>
+                        </div>
                         <!-- Mock content -->
                         <div class="p-5 space-y-4">
                             <!-- Scan status -->
@@ -252,39 +252,18 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="text-xs text-olive-500 text-center mt-2 mb-2">* Not the actual app</p>
                     </div>
-                                    <div>
-                                        <p class="text-sm font-semibold text-olive-900">Last Scan Complete</p>
-                                        <p class="text-xs text-olive-500">Nov 22, 2024 — 192.168.1.0/24</p>
-                                    </div>
-                                </div>
-                                <span class="px-2.5 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">Clean</span>
-                            </div>
-                            <!-- Stats grid -->
-                            <div class="grid grid-cols-3 gap-3">
-                                <div class="bg-olive-50 rounded-xl p-3 border border-olive-200/30 text-center">
-                                    <p class="text-2xl font-bold text-olive-900">47</p>
-                                    <p class="text-xs text-olive-500">Hosts Scanned</p>
-                                </div>
-                                <div class="bg-olive-50 rounded-xl p-3 border border-olive-200/30 text-center">
-                                    <p class="text-2xl font-bold text-amber-600">3</p>
-                                    <p class="text-xs text-olive-500">Vulnerabilities</p>
-                                </div>
-                                <div class="bg-olive-50 rounded-xl p-3 border border-olive-200/30 text-center">
-                                    <p class="text-2xl font-bold text-green-600">94%</p>
-                                    <p class="text-xs text-olive-500">Compliance Score</p>
-                                </div>
-                            </div>
-                            <!-- Progress bar -->
-                            <div class="space-y-1.5">
-                                <div class="flex justify-between text-xs text-olive-600">
-                                    <span>Compliance Progress</span>
-                                    <span class="font-semibold">94%</span>
-                                </div>
-                                <div class="w-full h-2 bg-olive-200 rounded-full overflow-hidden">
-                                    <div class="h-full bg-olive-600 rounded-full" style="width: 94%;"></div>
-</div>
+                    <!-- Floating element -->
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg border border-olive-200/50 px-4 py-3 flex items-center gap-3 z-10">
+                        <div class="w-10 h-10 rounded-full bg-cream-300 flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-olive-700"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-olive-900">Report Generated</p>
+                            <p class="text-xs text-olive-500">PDF Report Generated</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
