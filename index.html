@@ -89,6 +89,52 @@
         .scan-line {
             background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(155, 141, 77, 0.04) 2px, rgba(155, 141, 77, 0.04) 4px);
         }
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 60;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .gallery-img {
+            cursor: zoom-in;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(61, 57, 38, 0.15);
+        }
         ::selection {
             background-color: #c4bb84;
             color: #1f1c12;
@@ -203,11 +249,11 @@
 
                 <div class="relative">
                     <div class="grid grid-cols-2 gap-2">
-                        <img src="screenshots/01-dashboard.png" class="rounded">
-                        <img src="screenshots/02-scan-results.png" class="rounded">
-                        <img src="screenshots/03-reports.png" class="rounded">
-                        <img src="screenshots/04-settings.png" class="rounded">
-                        <img src="screenshots/05-scheduled.png" class="rounded">
+                        <img src="screenshots/01-dashboard.png" alt="NMapUI dashboard screenshot" class="rounded gallery-img" data-lightbox="screenshots/01-dashboard.png" tabindex="0">
+                        <img src="screenshots/02-scan-results.png" alt="NMapUI scan results screenshot" class="rounded gallery-img" data-lightbox="screenshots/02-scan-results.png" tabindex="0">
+                        <img src="screenshots/03-reports.png" alt="NMapUI reports screenshot" class="rounded gallery-img" data-lightbox="screenshots/03-reports.png" tabindex="0">
+                        <img src="screenshots/04-settings.png" alt="NMapUI settings screenshot" class="rounded gallery-img" data-lightbox="screenshots/04-settings.png" tabindex="0">
+                        <img src="screenshots/05-scheduled.png" alt="NMapUI scheduled scans screenshot" class="rounded gallery-img" data-lightbox="screenshots/05-scheduled.png" tabindex="0">
                     </div>    
                 </div> 
                 <!-- Right content - Dashboard preview -->
@@ -810,6 +856,14 @@ Homebrew/install/HEAD/install.sh)"</code></pre>
         lucide.createIcons();
     </script>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Expanded screenshot">
+        <button type="button" class="lightbox-close" onclick="closeLightbox()" title="Close" aria-label="Close expanded screenshot">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Full screen">
+    </div>
+
     <!-- ========== SCRIPTS ========== -->
     <script>
         // Mobile menu toggle
@@ -837,6 +891,46 @@ Homebrew/install/HEAD/install.sh)"</code></pre>
             });
         });
 
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            const openLightbox = () => {
+                lightboxImg.src = img.dataset.lightbox;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+
+            img.addEventListener('click', openLightbox);
+            img.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox();
+                }
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => { lightboxImg.src = ''; }, 200);
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
         // Copy code function
         function copyCode(button, text) {
             navigator.clipboard.writeText(text).then(() => {
@@ -856,6 +950,10 @@ Homebrew/install/HEAD/install.sh)"</code></pre>
         const paypalPlanPrice = document.getElementById('paypal-plan-price');
 
         function openPayPalModal(planType) {
+            if (!paypalModal || !paypalPlanName || !paypalPlanPrice) {
+                return;
+            }
+
             if (planType === 'monthly') {
                 paypalPlanName.textContent = 'Professional — Monthly';
                 paypalPlanPrice.textContent = '$99/month — Billed monthly';
@@ -869,23 +967,37 @@ Homebrew/install/HEAD/install.sh)"</code></pre>
         }
 
         function closePayPalModal() {
+            if (!paypalModal) {
+                return;
+            }
+
             paypalModal.classList.add('hidden');
             paypalModal.classList.remove('flex');
             document.body.style.overflow = '';
         }
 
-        paypalModal.addEventListener('click', (e) => {
-            if (e.target === paypalModal) {
-                closePayPalModal();
-            }
-        });
+        if (paypalModal) {
+            paypalModal.addEventListener('click', (e) => {
+                if (e.target === paypalModal) {
+                    closePayPalModal();
+                }
+            });
+        }
 
-        document.getElementById('pay-monthly-btn').addEventListener('click', () => openPayPalModal('monthly'));
-        document.getElementById('pay-yearly-btn').addEventListener('click', () => openPayPalModal('yearly'));
+        const payMonthlyBtn = document.getElementById('pay-monthly-btn');
+        const payYearlyBtn = document.getElementById('pay-yearly-btn');
+
+        if (payMonthlyBtn) {
+            payMonthlyBtn.addEventListener('click', () => openPayPalModal('monthly'));
+        }
+
+        if (payYearlyBtn) {
+            payYearlyBtn.addEventListener('click', () => openPayPalModal('yearly'));
+        }
 
         // Close modal on Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !paypalModal.classList.contains('hidden')) {
+            if (e.key === 'Escape' && paypalModal && !paypalModal.classList.contains('hidden')) {
                 closePayPalModal();
             }
         });
