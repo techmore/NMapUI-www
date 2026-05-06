@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerability Scanner Pricing Comparison | NMapUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        olive: { 50: '#f7f6f0', 100: '#eeecd8', 200: '#dbd6b0', 300: '#c4bb84', 400: '#ada163', 500: '#9b8d4d', 600: '#7d703c', 700: '#5f5532', 800: '#4a432b', 900: '#3d3926', 950: '#1f1c12' },
+                        cream: { 50: '#fefdf8', 100: '#fcf9ed', 200: '#f9f3d9', 300: '#f3e9b9', 400: '#eddb90', 500: '#e5cb65' }
+                    },
+                    fontFamily: {
+                        instrument: ['Instrument Serif', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .gradient-hero { background: radial-gradient(ellipse at top, #f7f6f0 0%, #eeecd8 44%, #dbd6b0 100%); }
+        .scan-line { background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(155, 141, 77, 0.04) 2px, rgba(155, 141, 77, 0.04) 4px); }
+        .comparison-table th { white-space: nowrap; }
+        .comparison-table td { vertical-align: top; }
+        ::selection { background-color: #c4bb84; color: #1f1c12; }
+    </style>
+</head>
+<body class="bg-olive-50 text-olive-900 font-sans antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-olive-50/90 backdrop-blur-lg border-b border-olive-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <div class="w-9 h-9 rounded-lg bg-olive-800 flex items-center justify-center group-hover:bg-olive-700 transition-colors">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-cream-200"></i>
+                    </div>
+                    <span class="font-instrument text-xl font-semibold text-olive-900 tracking-tight">NMap<span class="text-olive-600">UI</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-olive-700 hover:text-olive-900 transition-colors">Home</a>
+                    <a href="index.html#features" class="text-sm font-medium text-olive-700 hover:text-olive-900 transition-colors">Features</a>
+                    <a href="index.html#download" class="text-sm font-medium text-olive-700 hover:text-olive-900 transition-colors">Download</a>
+                    <a href="scanner-pricing.html" class="text-sm font-semibold text-olive-900 transition-colors">Scanner Pricing</a>
+                    <a href="recommended-tools.html" class="text-sm font-medium text-olive-700 hover:text-olive-900 transition-colors">Recommended Tools</a>
+                    <a href="index.html#pricing" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-olive-800 text-cream-100 text-sm font-semibold hover:bg-olive-700 transition-all shadow-sm hover:shadow-md">
+                        Get NMapUI
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center gap-4">
+                    <a href="scanner-pricing.html" class="text-sm font-semibold text-olive-900">Scanners</a>
+                    <a href="recommended-tools.html" class="text-sm font-medium text-olive-700">Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-28 pb-16 lg:pt-36 lg:pb-20 gradient-hero overflow-hidden">
+        <div class="absolute inset-0 scan-line pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-olive-200/70 border border-olive-300/50 text-olive-800 text-xs font-semibold tracking-wide uppercase">
+                    <i data-lucide="receipt-text" class="w-4 h-4"></i>
+                    Scanner market pricing
+                </span>
+                <h1 class="mt-6 font-instrument text-5xl sm:text-6xl lg:text-7xl font-semibold text-olive-900 leading-[1.05]">Vulnerability scanner pricing is hard to compare.</h1>
+                <p class="mt-6 text-lg sm:text-xl text-olive-700 max-w-3xl leading-relaxed">Enterprise security vendors often hide pricing behind sales calls, asset counts, module bundles, and annual minimums. This page summarizes public pricing signals for leading vulnerability scanning, exposure management, AppSec, and pentesting platforms.</p>
+                <div class="mt-8 flex flex-wrap gap-3 text-sm text-olive-700">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-olive-200/60"><i data-lucide="calendar-days" class="w-4 h-4"></i>Reviewed May 6, 2026</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-olive-200/60"><i data-lucide="badge-dollar-sign" class="w-4 h-4"></i>Published prices and quote-only status</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-olive-200/60"><i data-lucide="shield-alert" class="w-4 h-4"></i>Validate with vendor before purchase</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-12 bg-white border-y border-olive-200/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-6">
+                        <p class="text-sm font-semibold text-olive-500 uppercase tracking-wide">Lowest transparent entry</p>
+                        <p class="mt-3 font-instrument text-3xl font-semibold text-olive-900">NMapUI</p>
+                        <p class="mt-2 text-sm text-olive-600 leading-relaxed">Open-source Nmap GUI for teams that want basic vulnerability scanning without an enterprise contract.</p>
+                    </div>
+                    <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-6">
+                        <p class="text-sm font-semibold text-olive-500 uppercase tracking-wide">Common enterprise model</p>
+                        <p class="mt-3 font-instrument text-3xl font-semibold text-olive-900">Quote-only</p>
+                        <p class="mt-2 text-sm text-olive-600 leading-relaxed">Most enterprise scanners require scoping by assets, workloads, applications, modules, users, or pentest scope.</p>
+                    </div>
+                    <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-6">
+                        <p class="text-sm font-semibold text-olive-500 uppercase tracking-wide">Budget driver</p>
+                        <p class="mt-3 font-instrument text-3xl font-semibold text-olive-900">Assets and modules</p>
+                        <p class="mt-2 text-sm text-olive-600 leading-relaxed">Costs usually scale by endpoint, IP, cloud workload, application, scanner module, or pentest engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+                    <div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-olive-100 text-olive-700 text-xs font-semibold tracking-wide uppercase mb-4">Ranked comparison</span>
+                        <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-olive-900">Top scanning solutions and cost signals</h2>
+                    </div>
+                    <p class="text-sm text-olive-600 max-w-xl leading-relaxed">“Published cost” means the vendor exposes a price or starting price publicly. “Quote-only” means pricing depends on sales scoping, bundles, asset counts, or contract terms.</p>
+                </div>
+
+                <div class="overflow-x-auto rounded-2xl border border-olive-200/70 bg-white shadow-sm">
+                    <table class="comparison-table min-w-[1180px] w-full text-left text-sm">
+                        <thead class="bg-olive-900 text-cream-100">
+                            <tr>
+                                <th class="px-4 py-4 font-semibold">Rank</th>
+                                <th class="px-4 py-4 font-semibold">Solution</th>
+                                <th class="px-4 py-4 font-semibold">Company</th>
+                                <th class="px-4 py-4 font-semibold">Primary Focus</th>
+                                <th class="px-4 py-4 font-semibold">Public Cost Signal</th>
+                                <th class="px-4 py-4 font-semibold">Budget Notes</th>
+                                <th class="px-4 py-4 font-semibold">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-olive-100">
+                            <tr class="bg-cream-50/40"><td colspan="7" class="px-4 py-3 text-xs font-bold uppercase tracking-wide text-olive-700">Top Tier: Leaders</td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">1</td><td class="px-4 py-4 font-semibold text-olive-900">Tenable One + Nessus</td><td class="px-4 py-4">Tenable</td><td class="px-4 py-4">Vulnerability scanning and exposure management</td><td class="px-4 py-4 font-semibold">$4,790/year for Nessus Professional; $6,790/year for Nessus Expert; Tenable VM/One quote-based</td><td class="px-4 py-4 text-olive-600">Strong enterprise VA benchmark. Nessus is transparent; broader platform pricing depends on assets and modules.</td><td class="px-4 py-4"><a href="https://www.tenable.com/buy?usi_coupon=Tenable10" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Tenable</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">2</td><td class="px-4 py-4 font-semibold text-olive-900">Qualys VMDR / TruRisk</td><td class="px-4 py-4">Qualys</td><td class="px-4 py-4">Cloud and hybrid vulnerability management</td><td class="px-4 py-4 font-semibold">Quote-only</td><td class="px-4 py-4 text-olive-600">Qualys states pricing depends on Cloud Platform apps, IPs, web apps, and user licenses.</td><td class="px-4 py-4"><a href="https://www.qualys.com/subscriptions" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Qualys</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">3</td><td class="px-4 py-4 font-semibold text-olive-900">Rapid7 InsightVM</td><td class="px-4 py-4">Rapid7</td><td class="px-4 py-4">Vulnerability risk management</td><td class="px-4 py-4 font-semibold">Starts at $1.62/month per asset</td><td class="px-4 py-4 text-olive-600">Asset-based annual billing; public page positions InsightVM as a core package with free trial and sales path.</td><td class="px-4 py-4"><a href="https://www.rapid7.com/pricing/" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Rapid7</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">4</td><td class="px-4 py-4 font-semibold text-olive-900">Microsoft Defender Vulnerability Management</td><td class="px-4 py-4">Microsoft</td><td class="px-4 py-4">Endpoint and server vulnerability management</td><td class="px-4 py-4 font-semibold">$2/user/month add-on or $3/user/month standalone</td><td class="px-4 py-4 text-olive-600">Compelling for Microsoft-heavy environments because core capabilities are already bundled into some Defender plans.</td><td class="px-4 py-4"><a href="https://www.microsoft.com/en-us/security/business/threat-protection/microsoft-defender-vulnerability-management-pricing" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Microsoft</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">5</td><td class="px-4 py-4 font-semibold text-olive-900">CrowdStrike Falcon Exposure</td><td class="px-4 py-4">CrowdStrike</td><td class="px-4 py-4">Endpoint, exposure, and attack surface management</td><td class="px-4 py-4 font-semibold">Exposure module quote-only; Falcon bundles publish $7.99-$19.99/device/month</td><td class="px-4 py-4 text-olive-600">Exposure pricing is module and bundle driven. Public Falcon bundle prices are a useful floor, not a full exposure management quote.</td><td class="px-4 py-4"><a href="https://www.crowdstrike.com/en-us/pricing/" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">CrowdStrike</a></td></tr>
+
+                            <tr class="bg-cream-50/40"><td colspan="7" class="px-4 py-3 text-xs font-bold uppercase tracking-wide text-olive-700">Strong Contenders: Mid Tier</td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">6</td><td class="px-4 py-4 font-semibold text-olive-900">Wiz</td><td class="px-4 py-4">Wiz</td><td class="px-4 py-4">Cloud-native application protection and VM</td><td class="px-4 py-4 font-semibold">Custom quote</td><td class="px-4 py-4 text-olive-600">Wiz says pricing depends on environment-specific factors, commonly cloud workloads and modules.</td><td class="px-4 py-4"><a href="https://www.wiz.io/pricing" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Wiz</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">7</td><td class="px-4 py-4 font-semibold text-olive-900">Pentera</td><td class="px-4 py-4">Pentera</td><td class="px-4 py-4">Automated security validation and continuous pentesting</td><td class="px-4 py-4 font-semibold">Quote-only</td><td class="px-4 py-4 text-olive-600">Enterprise security validation platform; price depends on modules such as Core, Surface, Cloud, and Resolve.</td><td class="px-4 py-4"><a href="https://pentera.io/pentera-platform/" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Pentera</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">8</td><td class="px-4 py-4 font-semibold text-olive-900">Veracode</td><td class="px-4 py-4">Veracode</td><td class="px-4 py-4">AppSec, SCA, DAST, and pentesting</td><td class="px-4 py-4 font-semibold">Quote-only</td><td class="px-4 py-4 text-olive-600">Best fit when application security testing is the center of gravity rather than infrastructure scanning.</td><td class="px-4 py-4"><a href="https://www.veracode.com/" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Veracode</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">9</td><td class="px-4 py-4 font-semibold text-olive-900">IBM X-Force Red</td><td class="px-4 py-4">IBM</td><td class="px-4 py-4">Enterprise penetration testing and vulnerability assessment services</td><td class="px-4 py-4 font-semibold">Quote-only services</td><td class="px-4 py-4 text-olive-600">A services-led option for applications, networks, cloud, AI, hardware, and adversary simulation.</td><td class="px-4 py-4"><a href="https://www.ibm.com/services/penetration-testing" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">IBM</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">10</td><td class="px-4 py-4 font-semibold text-olive-900">Burp Suite Professional</td><td class="px-4 py-4">PortSwigger</td><td class="px-4 py-4">Web app pentesting toolkit</td><td class="px-4 py-4 font-semibold">Common public list signal: about $449/user/year</td><td class="px-4 py-4 text-olive-600">Gold standard manual web testing toolkit; Enterprise DAST is a separate product and normally sales-led.</td><td class="px-4 py-4"><a href="https://portswigger.net/burp/pro" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Burp Pro</a></td></tr>
+
+                            <tr class="bg-cream-50/40"><td colspan="7" class="px-4 py-3 text-xs font-bold uppercase tracking-wide text-olive-700">Solid Enterprise and Niche Players</td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">11</td><td class="px-4 py-4 font-semibold text-olive-900">Checkmarx One</td><td class="px-4 py-4">Checkmarx</td><td class="px-4 py-4">Developer-focused AppSec, SAST, DAST, SCA</td><td class="px-4 py-4 font-semibold">Flexible quote-based packaging</td><td class="px-4 py-4 text-olive-600">Enterprise AppSec platform with pricing driven by modules, developer scale, and deployment needs.</td><td class="px-4 py-4"><a href="https://checkmarx.com/packaging/" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Checkmarx</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">12</td><td class="px-4 py-4 font-semibold text-olive-900">Synack</td><td class="px-4 py-4">Synack</td><td class="px-4 py-4">Crowdsourced pentesting and PTaaS</td><td class="px-4 py-4 font-semibold">$16,000 platform; tests start at $5,060, $10,010, and $26,400</td><td class="px-4 py-4 text-olive-600">One of the clearest PTaaS pricing pages; platform subscription is separate from test credits.</td><td class="px-4 py-4"><a href="https://www.synack.com/platform/pricing/" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Synack</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">13</td><td class="px-4 py-4 font-semibold text-olive-900">Cobalt</td><td class="px-4 py-4">Cobalt</td><td class="px-4 py-4">PTaaS and manual pentesting</td><td class="px-4 py-4 font-semibold">Quote-only packages</td><td class="px-4 py-4 text-olive-600">Credit-based PTaaS model across Standard, Premium, and Enterprise tiers.</td><td class="px-4 py-4"><a href="https://www.cobalt.io/pentest-pricing" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Cobalt</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">14</td><td class="px-4 py-4 font-semibold text-olive-900">HackerOne Pentest</td><td class="px-4 py-4">HackerOne</td><td class="px-4 py-4">Bug bounty and pentesting</td><td class="px-4 py-4 font-semibold">Quote-only</td><td class="px-4 py-4 text-olive-600">Best suited for teams that want access to vetted external researchers and platform-based reporting.</td><td class="px-4 py-4"><a href="https://www.hackerone.com/product/pentest" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">HackerOne</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">15</td><td class="px-4 py-4 font-semibold text-olive-900">Tripwire / Fortra</td><td class="px-4 py-4">Fortra</td><td class="px-4 py-4">Configuration monitoring, integrity, compliance-heavy environments</td><td class="px-4 py-4 font-semibold">Quote-only / licensing varies</td><td class="px-4 py-4 text-olive-600">Often evaluated for compliance controls and file integrity alongside vulnerability management.</td><td class="px-4 py-4"><a href="https://www.fortra.com/products/tripwire" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Tripwire</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">16</td><td class="px-4 py-4 font-semibold text-olive-900">Nodeware</td><td class="px-4 py-4">Nodeware</td><td class="px-4 py-4">Continuous vulnerability management for MSPs</td><td class="px-4 py-4 font-semibold">Contact sales</td><td class="px-4 py-4 text-olive-600">Multi-tenant MSP-friendly model; emphasizes fast deployment, continuous scans, and operational simplicity.</td><td class="px-4 py-4"><a href="https://nodeware.com/" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Nodeware</a></td></tr>
+                            <tr><td class="px-4 py-4 font-semibold">17</td><td class="px-4 py-4 font-semibold text-olive-900">Invicti / Acunetix</td><td class="px-4 py-4">Invicti</td><td class="px-4 py-4">Web application and API vulnerability scanning</td><td class="px-4 py-4 font-semibold">Quote-only</td><td class="px-4 py-4 text-olive-600">Strong DAST/AppSec option; pricing page separates AppSec Core, Enterprise, DAST-only, and ASPM options but does not publish dollar amounts.</td><td class="px-4 py-4"><a href="https://www.invicti.com/pricing" class="text-olive-700 font-semibold underline" target="_blank" rel="noopener">Invicti</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 lg:py-20 bg-white border-y border-olive-200/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
+                    <div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-olive-100 text-olive-700 text-xs font-semibold tracking-wide uppercase mb-4">Buying notes</span>
+                        <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-olive-900">How to read the pricing</h2>
+                        <p class="mt-4 text-olive-600 leading-relaxed">Most vendors are not pricing the same thing. A Nessus license, a Microsoft endpoint add-on, a Wiz workload quote, and a Synack pentest engagement can all be called “scanning,” but the unit economics are different.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-5"><i data-lucide="server" class="w-6 h-6 text-olive-700"></i><h3 class="mt-4 font-semibold text-olive-900">Infrastructure VM</h3><p class="mt-2 text-sm text-olive-600 leading-relaxed">Usually priced by assets, IPs, endpoints, or sensors. Tenable, Qualys, Rapid7, Microsoft, and CrowdStrike live here.</p></div>
+                        <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-5"><i data-lucide="cloud" class="w-6 h-6 text-olive-700"></i><h3 class="mt-4 font-semibold text-olive-900">Cloud exposure</h3><p class="mt-2 text-sm text-olive-600 leading-relaxed">Often priced by workloads and cloud accounts. Wiz and CrowdStrike Exposure are typically sales-scoped.</p></div>
+                        <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-5"><i data-lucide="code-2" class="w-6 h-6 text-olive-700"></i><h3 class="mt-4 font-semibold text-olive-900">AppSec scanning</h3><p class="mt-2 text-sm text-olive-600 leading-relaxed">Usually priced by apps, developers, scan volume, or AST modules. Veracode, Checkmarx, Burp, and Invicti are most relevant.</p></div>
+                        <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-5"><i data-lucide="crosshair" class="w-6 h-6 text-olive-700"></i><h3 class="mt-4 font-semibold text-olive-900">Pentesting / PTaaS</h3><p class="mt-2 text-sm text-olive-600 leading-relaxed">Priced by engagement, platform access, credits, duration, and scope. Synack is transparent; Cobalt and HackerOne usually quote.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 lg:py-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-olive-900">Where NMapUI fits</h2>
+                <p class="mt-5 text-lg text-olive-600 leading-relaxed">NMapUI is not trying to replace a full enterprise exposure management platform. It is a practical, open-source starting point for system administrators who need repeatable Nmap-driven vulnerability scans, local reporting, and a simpler path to cyber insurance evidence.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="index.html#download" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-olive-800 text-cream-100 font-semibold text-sm hover:bg-olive-700 transition-all shadow-lg shadow-olive-800/20"><i data-lucide="download" class="w-4.5 h-4.5"></i>Download NMapUI</a>
+                    <a href="index.html" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border-2 border-olive-400/50 text-olive-800 font-semibold text-sm hover:bg-olive-200/40 transition-all"><i data-lucide="arrow-left" class="w-4.5 h-4.5"></i>Back to homepage</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 bg-olive-900 text-cream-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-cream-300/60">&copy; 2026 NMapUI. Pricing data should be verified with each vendor before procurement.</p>
+            <a href="index.html" class="text-sm text-cream-200 hover:text-white transition-colors">NMapUI home</a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

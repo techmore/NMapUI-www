@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Network Tools and Pricing | NMapUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        olive: { 50: '#f7f6f0', 100: '#eeecd8', 200: '#dbd6b0', 300: '#c4bb84', 400: '#ada163', 500: '#9b8d4d', 600: '#7d703c', 700: '#5f5532', 800: '#4a432b', 900: '#3d3926', 950: '#1f1c12' },
+                        cream: { 50: '#fefdf8', 100: '#fcf9ed', 200: '#f9f3d9', 300: '#f3e9b9', 400: '#eddb90', 500: '#e5cb65' }
+                    },
+                    fontFamily: {
+                        instrument: ['Instrument Serif', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .gradient-hero { background: radial-gradient(ellipse at top, #f7f6f0 0%, #eeecd8 44%, #dbd6b0 100%); }
+        .scan-line { background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(155, 141, 77, 0.04) 2px, rgba(155, 141, 77, 0.04) 4px); }
+        .tool-table th { white-space: nowrap; }
+        .tool-table td { vertical-align: top; }
+        ::selection { background-color: #c4bb84; color: #1f1c12; }
+    </style>
+</head>
+<body class="bg-olive-50 text-olive-900 font-sans antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-olive-50/90 backdrop-blur-lg border-b border-olive-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2.5 group">
+                    <div class="w-9 h-9 rounded-lg bg-olive-800 flex items-center justify-center group-hover:bg-olive-700 transition-colors">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-cream-200"></i>
+                    </div>
+                    <span class="font-instrument text-xl font-semibold text-olive-900 tracking-tight">NMap<span class="text-olive-600">UI</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-olive-700 hover:text-olive-900 transition-colors">Home</a>
+                    <a href="index.html#features" class="text-sm font-medium text-olive-700 hover:text-olive-900 transition-colors">Features</a>
+                    <a href="index.html#download" class="text-sm font-medium text-olive-700 hover:text-olive-900 transition-colors">Download</a>
+                    <a href="scanner-pricing.html" class="text-sm font-medium text-olive-700 hover:text-olive-900 transition-colors">Scanner Pricing</a>
+                    <a href="recommended-tools.html" class="text-sm font-semibold text-olive-900 transition-colors">Recommended Tools</a>
+                </div>
+                <div class="md:hidden flex items-center gap-4">
+                    <a href="scanner-pricing.html" class="text-sm font-medium text-olive-700">Scanners</a>
+                    <a href="recommended-tools.html" class="text-sm font-semibold text-olive-900">Tools</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-28 pb-16 lg:pt-36 lg:pb-20 gradient-hero overflow-hidden">
+        <div class="absolute inset-0 scan-line pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-olive-200/70 border border-olive-300/50 text-olive-800 text-xs font-semibold tracking-wide uppercase">
+                    <i data-lucide="wrench" class="w-4 h-4"></i>
+                    Practical network toolkit
+                </span>
+                <h1 class="mt-6 font-instrument text-5xl sm:text-6xl lg:text-7xl font-semibold text-olive-900 leading-[1.05]">Recommended network tools with pricing.</h1>
+                <p class="mt-6 text-lg sm:text-xl text-olive-700 max-w-3xl leading-relaxed">NMapUI covers repeatable Nmap vulnerability scans. These companion tools help with Wi-Fi analysis, packet capture, device discovery, asset inventory, and continuous network monitoring.</p>
+                <div class="mt-8 flex flex-wrap gap-3 text-sm text-olive-700">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-olive-200/60"><i data-lucide="calendar-days" class="w-4 h-4"></i>Reviewed May 6, 2026</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-olive-200/60"><i data-lucide="wifi" class="w-4 h-4"></i>Includes NetSpot WiFi Analyzer</span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-olive-200/60"><i data-lucide="badge-dollar-sign" class="w-4 h-4"></i>Free, published, and quote-only pricing</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-12 bg-white border-y border-olive-200/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-4 gap-5">
+                    <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-5">
+                        <i data-lucide="radar" class="w-6 h-6 text-olive-700"></i>
+                        <h2 class="mt-4 font-semibold text-olive-900">Scan</h2>
+                        <p class="mt-2 text-sm text-olive-600 leading-relaxed">Find hosts, services, and exposure.</p>
+                    </div>
+                    <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-5">
+                        <i data-lucide="wifi" class="w-6 h-6 text-olive-700"></i>
+                        <h2 class="mt-4 font-semibold text-olive-900">Analyze Wi-Fi</h2>
+                        <p class="mt-2 text-sm text-olive-600 leading-relaxed">Map coverage, interference, and signal health.</p>
+                    </div>
+                    <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-5">
+                        <i data-lucide="boxes" class="w-6 h-6 text-olive-700"></i>
+                        <h2 class="mt-4 font-semibold text-olive-900">Inventory</h2>
+                        <p class="mt-2 text-sm text-olive-600 leading-relaxed">Track devices, software, and ownership.</p>
+                    </div>
+                    <div class="rounded-2xl bg-olive-50 border border-olive-200/60 p-5">
+                        <i data-lucide="activity" class="w-6 h-6 text-olive-700"></i>
+                        <h2 class="mt-4 font-semibold text-olive-900">Monitor</h2>
+                        <p class="mt-2 text-sm text-olive-600 leading-relaxed">Watch uptime, SNMP metrics, and alerts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+                    <div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-olive-100 text-olive-700 text-xs font-semibold tracking-wide uppercase mb-4">Tool shortlist</span>
+                        <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-olive-900">Useful tools around NMapUI</h2>
+                    </div>
+                    <p class="text-sm text-olive-600 max-w-xl leading-relaxed">Pricing changes often. Treat quote-only products as budget placeholders until the vendor scopes your environment.</p>
+                </div>
+
+                <div class="overflow-x-auto rounded-2xl border border-olive-200/70 bg-white shadow-sm">
+                    <table class="tool-table min-w-[1120px] w-full text-left text-sm">
+                        <thead class="bg-olive-900 text-cream-100">
+                            <tr>
+                                <th class="px-4 py-4 font-semibold">Tool</th>
+                                <th class="px-4 py-4 font-semibold">Category</th>
+                                <th class="px-4 py-4 font-semibold">Best Use</th>
+                                <th class="px-4 py-4 font-semibold">Pricing Signal</th>
+                                <th class="px-4 py-4 font-semibold">Why Recommend It</th>
+                                <th class="px-4 py-4 font-semibold">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-olive-100">
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">NetSpot WiFi Analyzer</td>
+                                <td class="px-4 py-4">Wi-Fi survey and analyzer</td>
+                                <td class="px-4 py-4">Heatmaps, signal troubleshooting, channel planning, site surveys</td>
+                                <td class="px-4 py-4 font-semibold">Free tier; paid Home, Pro, and Enterprise editions. Third-party pricing signals commonly show Pro around $149 one-time and Enterprise around $499 one-time; official page currently exposes editions and buy flow.</td>
+                                <td class="px-4 py-4 text-olive-600">Best fit when a vulnerability scan finds devices, but you also need to understand wireless coverage and weak spots.</td>
+                                <td class="px-4 py-4"><a href="https://www.netspotapp.com/netspotpro.html" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">NetSpot</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Wireshark</td>
+                                <td class="px-4 py-4">Packet analyzer</td>
+                                <td class="px-4 py-4">Deep packet capture, protocol debugging, incident triage</td>
+                                <td class="px-4 py-4 font-semibold">Free and open source</td>
+                                <td class="px-4 py-4 text-olive-600">Essential when a scan identifies a service but you need to inspect traffic behavior or prove what is happening on the wire.</td>
+                                <td class="px-4 py-4"><a href="https://www.wireshark.org/" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">Wireshark</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Angry IP Scanner</td>
+                                <td class="px-4 py-4">Fast IP discovery</td>
+                                <td class="px-4 py-4">Quick ping sweeps and lightweight host discovery</td>
+                                <td class="px-4 py-4 font-semibold">Free and open source</td>
+                                <td class="px-4 py-4 text-olive-600">Useful for quick LAN discovery before deciding what to scan more deeply with NMapUI.</td>
+                                <td class="px-4 py-4"><a href="https://angryipscanner.org/" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">Angry IP</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Advanced IP Scanner</td>
+                                <td class="px-4 py-4">Windows LAN scanner</td>
+                                <td class="px-4 py-4">Quick Windows-friendly network discovery and remote access shortcuts</td>
+                                <td class="px-4 py-4 font-semibold">Free</td>
+                                <td class="px-4 py-4 text-olive-600">A simple helpdesk-friendly option for Windows shops that need fast device visibility.</td>
+                                <td class="px-4 py-4"><a href="https://www.advanced-ip-scanner.com/" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">Advanced IP Scanner</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Fing Desktop</td>
+                                <td class="px-4 py-4">Home and small office network scanner</td>
+                                <td class="px-4 py-4">Device recognition, basic monitoring, network history</td>
+                                <td class="px-4 py-4 font-semibold">Desktop is free for personal use; paid Starter, Premium, and Professional subscriptions available</td>
+                                <td class="px-4 py-4 text-olive-600">Good for non-specialists who need understandable device discovery without enterprise monitoring overhead.</td>
+                                <td class="px-4 py-4"><a href="https://www.fing.com/desktop/" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">Fing</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Lansweeper</td>
+                                <td class="px-4 py-4">Asset inventory</td>
+                                <td class="px-4 py-4">Hardware/software inventory, asset discovery, compliance support</td>
+                                <td class="px-4 py-4 font-semibold">Free up to 100 assets; Starter from $199/month billed annually with 2,000 assets</td>
+                                <td class="px-4 py-4 text-olive-600">Fills the asset management gap that scan tools do not solve by themselves.</td>
+                                <td class="px-4 py-4"><a href="https://www.lansweeper.com/pricing/" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">Lansweeper</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Domotz</td>
+                                <td class="px-4 py-4">Network monitoring</td>
+                                <td class="px-4 py-4">MSP-friendly device monitoring, SNMP, alerts, remote management</td>
+                                <td class="px-4 py-4 font-semibold">$1.50 per managed device/month; free discovery for unmanaged devices</td>
+                                <td class="px-4 py-4 text-olive-600">Transparent pricing and simple deployment make it practical for small business and MSP monitoring.</td>
+                                <td class="px-4 py-4"><a href="https://www.domotz.com/pricing.php" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">Domotz</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Auvik</td>
+                                <td class="px-4 py-4">Network management</td>
+                                <td class="px-4 py-4">Topology mapping, configuration backups, MSP monitoring</td>
+                                <td class="px-4 py-4 font-semibold">Custom quote; priced around core network infrastructure devices</td>
+                                <td class="px-4 py-4 text-olive-600">Strong when automatic network maps and switch/router/firewall visibility matter more than raw scan output.</td>
+                                <td class="px-4 py-4"><a href="https://support.auvik.com/hc/en-us/articles/201515670-How-much-does-Auvik-cost" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">Auvik</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Paessler PRTG</td>
+                                <td class="px-4 py-4">Sensor-based monitoring</td>
+                                <td class="px-4 py-4">SNMP, bandwidth, server, application, and infrastructure monitoring</td>
+                                <td class="px-4 py-4 font-semibold">Sensor-based subscription; Paessler notes most devices need roughly 5-10 sensors</td>
+                                <td class="px-4 py-4 text-olive-600">A mature monitoring platform for teams that want broad metrics and alerting in one product.</td>
+                                <td class="px-4 py-4"><a href="https://portal.paessler.com/shop/paessler-prtg-network-monitor-subscription-213" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">PRTG</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">WiFi Explorer</td>
+                                <td class="px-4 py-4">macOS Wi-Fi analyzer</td>
+                                <td class="px-4 py-4">Channel, BSSID, RSSI, noise, and wireless troubleshooting on Mac</td>
+                                <td class="px-4 py-4 font-semibold">Paid Mac app; pricing varies by edition and store</td>
+                                <td class="px-4 py-4 text-olive-600">Fast macOS-native alternative when you need wireless diagnostics without a full survey workflow.</td>
+                                <td class="px-4 py-4"><a href="https://www.intuitibits.com/products/wifi-explorer/" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">WiFi Explorer</a></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-4 font-semibold text-olive-900">Ekahau Connect</td>
+                                <td class="px-4 py-4">Professional Wi-Fi design</td>
+                                <td class="px-4 py-4">Enterprise Wi-Fi design, validation, and survey work</td>
+                                <td class="px-4 py-4 font-semibold">Quote/reseller pricing; professional bundles are commonly hardware plus annual subscription</td>
+                                <td class="px-4 py-4 text-olive-600">The higher-end choice when Wi-Fi design accuracy, validation gear, and professional reporting are required.</td>
+                                <td class="px-4 py-4"><a href="https://www.ekahau.com/products/ekahau-connect/" target="_blank" rel="noopener" class="text-olive-700 font-semibold underline">Ekahau</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 lg:py-20 bg-white border-y border-olive-200/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-instrument text-4xl sm:text-5xl font-semibold text-olive-900">A pragmatic stack for a small IT team</h2>
+                <p class="mt-5 text-lg text-olive-600 leading-relaxed">Use NMapUI for repeatable vulnerability scans, NetSpot for wireless coverage, Wireshark when traffic needs inspection, Lansweeper when asset inventory matters, and Domotz or PRTG when you need ongoing monitoring and alerts.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="index.html#download" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-olive-800 text-cream-100 font-semibold text-sm hover:bg-olive-700 transition-all shadow-lg shadow-olive-800/20"><i data-lucide="download" class="w-4.5 h-4.5"></i>Download NMapUI</a>
+                    <a href="scanner-pricing.html" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border-2 border-olive-400/50 text-olive-800 font-semibold text-sm hover:bg-olive-200/40 transition-all"><i data-lucide="table" class="w-4.5 h-4.5"></i>Compare scanners</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 bg-olive-900 text-cream-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-cream-300/60">&copy; 2026 NMapUI. Pricing data should be verified with each vendor before purchase.</p>
+            <a href="index.html" class="text-sm text-cream-200 hover:text-white transition-colors">NMapUI home</a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
